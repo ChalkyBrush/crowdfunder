@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 .navbar-inner {
-	background-image: linear-gradient(to bottom, rgb(136, 14, 14), #B97979);
+	background-image: linear-gradient(to bottom, #124E6B, #2A7CA3);
 }
 
 .navbar .brand {
@@ -17,7 +17,21 @@
 .navbar .nav > li > a {
 float: none;
 padding: 10px 15px 10px;
-color: #1F1F2E;
+color: #FFFFFF;
 text-decoration: none;
 text-shadow: 0 1px 0 black;
+}
+
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+color: #C2EBFF;
+text-decoration: none;
+background-image: linear-gradient(to bottom, #104660, #267093);
+-webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+-moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+border-width: 0 0 2px;
 }
