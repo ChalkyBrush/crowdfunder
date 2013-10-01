@@ -3,5 +3,5 @@
 
 <% @projects.each do |project| %>
 	<br>
-  	<h1><%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li></h1>
+  	<%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li>
 <% end %>

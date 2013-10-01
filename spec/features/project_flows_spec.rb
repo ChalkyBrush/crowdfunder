@@ -37,6 +37,9 @@ describe "Project Listing" do
       # Expect on this page the first h1 has the text project1's title
       page.should have_selector('h1:first', text: project1.title)
       expect(page).to have_selector('h1:first', text: project1.title)
+
+      page.should have_selector('.navbar ul li.active a', text: "Projects") 
+      expect(page).to have_selector('.navbar ul li.active a', text: "Projects")
     end
 
     it "should display the navigation" do
@@ -56,7 +59,9 @@ describe "Project Listing" do
       # Expect the projects nav element is active
       page.should have_selector('.navbar ul li.active a', text: "Projects") 
       expect(page).to have_selector('.navbar ul li.active a', text: "Projects")
+      
     end
+
 
 
 
