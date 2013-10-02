@@ -9,5 +9,6 @@
 	<br>
 	<div class = "project">
   	<%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li>
+  	 <%= link_to 'Edit', "/my/projects/#{project.id}/edit", class: 'btn btn-warning' %>
   </div>
 <% end %>
