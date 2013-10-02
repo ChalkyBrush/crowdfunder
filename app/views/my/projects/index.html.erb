@@ -1,0 +1,13 @@
+<br>
+<%= link_to '+ Add a new project', "/my/projects/new", class: 'btn btn-success' %>
+<br>
+
+<h1>My projects</h1>
+
+
+<% @projects.each do |project| %>
+	<br>
+	<div class = "project">
+  	<%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li>
+  </div>
+<% end %>

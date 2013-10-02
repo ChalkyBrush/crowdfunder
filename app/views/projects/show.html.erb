@@ -19,6 +19,7 @@
 <% percent_to_goal = (total_pledges*100)/@project[:goal] %>
 
 <br>
+<% if total_pledges.to_i < @project[:goal].to_i%>
 Progress:
 <div class="progress progress-info" style="margin-bottom: 9px;">
 
@@ -27,15 +28,15 @@ Progress:
 </div>
 
 <br>
+<%else%>
+<div class="progress progress-danger" style="margin-bottom: 9px;">
+    <div class="bar" style="width: 100%">Goal Reached! Thanks to everyone who backed this project!</div>
+</div>
+ <%end%>
 <%= link_to 'Back This Project', "/projects/#{@project.id}/pledges/new", class: 'btn btn-success' %>
 
-<!-- <div class="progress progress-success" style="margin-bottom: 9px;">
-    <div class="bar" style="width: 40%"></div>
-</div>
-<div class="progress progress-warning" style="margin-bottom: 9px;">
-    <div class="bar" style="width: 60%"></div>
-</div>
-<div class="progress progress-danger" style="margin-bottom: 9px;">
-    <div class="bar" style="width: 80%"></div>
-</div> -->
+<br>
+<br>
+<br>
+<%= link_to '< to projects index', "/projects/", class: 'btn btn-info' %>
 
