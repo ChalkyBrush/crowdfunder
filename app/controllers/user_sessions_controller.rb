@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
         format.html { redirect_back_or_to(:root, :notice => 'Login successful.') }
         format.xml { render :xml => @user, :status => :created, :location => @user }
       else
-        format.html { flash.now[:alert] = "Login failed."; render :action => "new" }
+        format.html { flash.now[:alert] = "Login failed. Invalid credentials"; render :action => "new" }
         format.xml { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end

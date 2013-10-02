@@ -28,12 +28,22 @@
     </div>
   </div>
 </div>
+  
   <% if flash[:notice] != nil %>
-<div class ="flashy">
+  <div class ="flashy">
 
   <span class="label label-success">
-<%= flash[:notice] %>
-</span>
-</div>
-<%end%>
+  <%= flash[:notice] %>
+  </span>
+  </div>
+  <%end%>
+
+  <% if flash[:alert] != nil %>
+  <div class ="flashy">
+
+  <span class="label label-warning">
+  <%= flash[:alert] %>
+  </span>
+  </div>
+  <%end%>
 
