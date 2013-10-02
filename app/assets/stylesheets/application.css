@@ -53,3 +53,7 @@ body {
 .pledges{
 	text-align: left;
 }
+
+.tablehead{
+	font-weight: bold;
+}

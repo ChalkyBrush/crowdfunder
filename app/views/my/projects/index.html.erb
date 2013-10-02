@@ -1,14 +1,26 @@
 <br>
-<%= link_to '+ Add a new project', "/my/projects/new", class: 'btn btn-success' %>
+<%= link_to '+ Add a New Project', "/my/projects/new", class: 'btn btn-success' %>
 <br>
 
-<h1>My projects</h1>
+<h1>My projects</h1><%=current_user.first_name%> <%=current_user.last_name%>
 
-
+<table class="table table-striped">
+	<tr class = "tablehead">
+	<td>Project Title</td>
+	<td>Teaser</td>
+	<td>Goal:</td>
+	<td> </td>
+	</strong></tr>
 <% @projects.each do |project| %>
-	<br>
+	
 	<div class = "project">
-  	<%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li>
-  	 <%= link_to 'Edit', "/my/projects/#{project.id}/edit", class: 'btn btn-warning' %>
+		<tr>
+  	<td><%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li></td>
+  	<td><%=project[:teaser]%></td>
+  	<td>$<%=project[:goal].to_s.reverse.gsub(/...(?=.)/,'\&,').reverse%></td>
+  	<td> <%= link_to 'Edit', "/my/projects/#{project.id}/edit", class: 'btn btn-warning' %></td>
+  	</tr>
   </div>
+
 <% end %>
+</table>

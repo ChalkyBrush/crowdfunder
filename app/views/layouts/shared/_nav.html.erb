@@ -12,7 +12,7 @@
           </li>
           <% if logged_in? %>
           <li class="<%= 'active' if (controller_path== "my/projects") %>">
-            <%= link_to 'My Projects', "/my/projects/" %>
+            <%= link_to 'My Projects', "/my/projects" %>
           </li>
           <%end%>
         </ul>
@@ -22,7 +22,6 @@
         <div class="pull-right">
         <% if logged_in? %>
         <%= link_to 'Logout', :logout, class: 'btn btn-warning' %>
-        <%= current_user.first_name %> <%= current_user.last_name %>
          <% else %>
 
          <%= link_to " Login ", :login , class: 'btn btn-success' %>
