@@ -8,8 +8,8 @@ class UsersController < ApplicationController
   	@user = User.new(params[:user])
     
   	if @user.save
-      session[:user_id] = @user.id
-  		redirect_to '/' #:notice => "Signed up!"
+      auto_login(@user)
+  		redirect_to root_url, :notice => "Account Created!"
   	else 
   		render :new
   	end

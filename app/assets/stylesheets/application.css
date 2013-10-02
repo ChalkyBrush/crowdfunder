@@ -27,3 +27,20 @@ body {
 .error{
 	list-style-type: none;
 }
+
+.login{
+	padding-top: 1px;
+}
+
+.field{
+	margin-top: 6px;
+}
+
+.loggedin{
+	padding-right: 50px;
+}
+
+.flashy{
+	text-align: center;
+	margin-top: 15px;
+}

@@ -17,13 +17,23 @@
         <div class="pull-right">
         <% if logged_in? %>
         <%= link_to 'Logout', :logout, class: 'btn btn-warning' %>
+        <%= current_user.first_name %> <%= current_user.last_name %>
          <% else %>
-         <%= link_to 'Login', :login , class: 'btn btn-success' %>
+
+         <%= link_to " Login ", :login , class: 'btn btn-success' %>
          <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-success' %>
 
         <% end %>
-</div>
+        </div>
     </div>
   </div>
 </div>
+  <% if flash[:notice] != nil %>
+<div class ="flashy">
+
+  <span class="label label-success">
+<%= flash[:notice] %>
+</span>
+</div>
+<%end%>
 
