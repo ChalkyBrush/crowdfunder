@@ -27,8 +27,8 @@ describe Pledge do
     # Should not be able to save
     pledge.should_not == pledge.save
 
-    pledge.should have(1).errors_on(:amount)
-    expect(pledge).to have(1).errors_on(:amount)
+    pledge.should have(2).errors_on(:amount)
+    expect(pledge).to have(2).errors_on(:amount)
   end
 
   it "should require an amount greater than 0" do 
