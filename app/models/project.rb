@@ -8,4 +8,8 @@ class Project < ActiveRecord::Base
   validates :goal, presence: true, numericality: {greater_than: 0, allow_blank: true}
 
   has_many :pledges
+
+  def formatted_goal
+    formatted_n = "$" + goal.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
+  end
 end

@@ -11,7 +11,7 @@ describe "Pledge Listing" do
 
       click_link 'Back This Project'
 
-      expect(current_path).to eq(new_session_path)
+      expect(current_path).to eq(new_user_session_path)
       page.should have_content("Please login first.")
       expect(page).to have_content("Please login first.")
     end
