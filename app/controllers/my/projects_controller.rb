@@ -4,7 +4,7 @@ class My::ProjectsController < ApplicationController
   before_filter :require_project, except: [:index, :new, :create]
 
   def index
-    @projects = current_user.projects.order('projects.created_at DESC').all
+    @projects = Project.order('projects.created_at DESC').page(params[:page])
   end
 
   def new

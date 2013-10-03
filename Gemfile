@@ -43,6 +43,11 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'kaminari'
+gem 'kaminari-bootstrap'
+
+gem 'carrierwave'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

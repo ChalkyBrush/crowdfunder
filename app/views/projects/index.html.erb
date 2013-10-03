@@ -1,7 +1,6 @@
 <h1>Listing projects</h1>
 
 
-<% @projects.each do |project| %>
-	<br>
-  	<%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li>
-<% end %>
+<%= render 'project' %>
+
+<%= paginate @projects %>
